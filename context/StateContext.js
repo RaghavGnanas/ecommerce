@@ -15,7 +15,7 @@ export const StateContext = ({ children }) => {
 
   console.log(showCart);
   const onAdd = (product, quantity) => {
-    const checkProductInCart = cartItems.find((item) => item._id === product._id);
+    const checkProductInCart = cartItems?.find((item) => item._id === product._id);
 
     setTotalPrice(
       (prevTotalPrice) => prevTotalPrice + product.price * quantity
@@ -42,9 +42,9 @@ export const StateContext = ({ children }) => {
   };
 
   const toggleCartItemQuanitity = (id, value) => {
-    foundProduct = cartItems.find((item) => item._id === id);
-    index = cartItems.findIndex((item) => item._id === id);
-    const newCartItems = cartItems.filter((item) => item._id !== id);
+    foundProduct = cartItems?.find((item) => item._id === id);
+    index = cartItems?.findIndex((item) => item._id === id);
+    const newCartItems = cartItems?.filter((item) => item._id !== id);
 
     if (value === "inc") {
       setCartItems([
@@ -66,8 +66,8 @@ export const StateContext = ({ children }) => {
   };
 
   const onRemove = (product) => {
-    foundProduct = cartItems.find((item) => item._id === product._id);
-    const newCartItems = cartItems.find((item) => item._id !== product._id);
+    foundProduct = cartItems?.find((item) => item._id === product._id);
+    const newCartItems = cartItems?.find((item) => item._id !== product._id);
 
     setTotalPrice(
       (prevTotalPrice) =>

@@ -235,6 +235,7 @@ text-align: end;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+  width: 100%;
 }
 .banner-desc .left h3{
   font-weight: 900;
@@ -259,7 +260,7 @@ text-align: end;
   font-size: 60px;
 }
 .banner-desc .right p{
-  font-size: 18px;
+  font-size: 15px;
 }
 .banner-desc .right .company-desc{
   font-size: 14px;
